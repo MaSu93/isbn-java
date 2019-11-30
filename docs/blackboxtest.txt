@@ -1,0 +1,29 @@
+BLACK-BOX-TEST
+  Der Black-Box-Test (BBT) testet die Funktionalität eines Testprogramms, welches für die Validierung einer ISBN zuständig ist.
+  Für den BBT wird eine CSV-Datei verwendet, die gültige und ungültige ISBNs beinhalten. Durch die gültigen und ungültigen Werte lassen sich gleichzeitig die Äquivalenzklassen ableiten.
+  Bei der Eingabe der einzelnen ISBNs werden folgende Eigenschaften berücksichtigt, die den Erfolg des gesamten BBT beeinflusst.
+
+  Die Anforderungen des Tests sind:
+    1) Erkennung, ob die jeweilige ISBN gültig oder ungültig ist.
+       - Fall 1: gültige ISBN
+          + Das Testprogramm liefert ein gültiges Ergebnis
+          ~ Das Testprogramm liefert ein ungültiges Ergebnis
+       - Fall 2 ungültige ISBN
+          ~ Das Testprogramm liefert ein gültiges Ergebnis
+          + Das Testprogramm liefert ein ungültiges Ergebnis
+
+    2) Erkennung, ob die ISBN ein Präfix beinhaltet und ob es sich dabei um die Zahl 978 oder 979 handelt.
+    3) Prüfung einer gültigen Gruppennummer (Ländernummer)
+      - Ist eine Kennzahl für eine nationale, geographische, Sprach- oder sonstige geeignete Gruppe gegeben?
+
+    4) Prüfung einer gültigen Verlagsnummer
+      - Ist die Verlagsnummer einer nationalen oder regionalen ISBN-Agentur zugehörig? (Beispiel: ISBN-Agentur in Frankfurt a. M.) 
+
+    5) Prüfung einer gültigen Titelnummer (Bandnummer)
+      - Wird zwischen unterschiedlichen Produkten unterschieden? (Beispiel: separat verkäufliche Bände oder unterschiedliche Einbände)
+
+    6) Prüfung der Prüfziffer
+      - Können Eingabe- und Lesefehlern erkannt werden
+
+    7) Ist die ISBN mit und ohne Bindestriche einlesbar?
+      - Beispiel: ISBN 978-3-86680-192-9 und 9783866801929

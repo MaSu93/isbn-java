@@ -1,0 +1,8 @@
+TESTFALLKATALOG (Beispiel)
+	gültige Werte			|		ungültige Werte
+	978-3-86680-192-9		|		XYZ123				(Keine Buchstaben)
+	9783866801929			|		12345				(Zu Kurz)
+	3-86680-192-9			|		1234567890112233	(Zu Lang)
+	3866801929				|		978-3-?ß*´!			(Keine Sonderzeichen)
+	979-3-86680-192-9		|		...
+	9793866801929			|		..
